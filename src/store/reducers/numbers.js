@@ -1,3 +1,5 @@
+import * as types from "../actions/actionTypes";
+
 const INITIAL_STATE = {
   min: 7,
   max: 31,
@@ -5,12 +7,12 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
-    case "CHANGED_MIN_NUMBER":
+    case types.CHANGED_MIN_NUMBER:
       return {
         ...state,
         min: action.payload,
       };
-    case "CHANGED_MAX_NUMBER":
+    case types.CHANGED_MAX_NUMBER:
       return {
         ...state,
         max: action.payload,
